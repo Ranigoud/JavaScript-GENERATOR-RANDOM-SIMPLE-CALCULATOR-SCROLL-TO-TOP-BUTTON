@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+   <head>
+    <title>Scroll To Top Button</title>
+     <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            font-family:sans-serif
+
+        }
+        section
+        {
+            width:100%;
+            height:100vh;
+            background-color:red;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 100px;
+
+        }
+        section:nth-child(even)
+        {
+            background-color:green;
+            color:#fff;
+        }
+        .scrollTop
+        {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 20px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid white;
+            cursor:pointer;
+            transition: all 0.5s ease 0s;
+
+        }
+        .scrollTop:hover
+        {
+            background-color:green;
+            color:#fff
+        }
+
+     </style>
+   </head>
+    <body>
+        <section>One</section>
+        <section>Two</section>
+        <section>Three</section>
+        <section>Four</section>
+        <section>Five</section>
+
+        <div onclick="scrollToTop()" class="scrollTop">Top</div>
+
+
+        <script>
+            function scrollToTop()
+            {
+                window.scrollTo(0,0)
+            }
+
+        </script>
+    </body>
+</html>
